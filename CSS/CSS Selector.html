@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css</title>
+    <style>
+        /*Universal Selector*/
+        *{
+            color: green;
+        }
+        /* Tag Selector */
+        table{
+            width: 30%;
+            border: 2px solid green;
+        }
+        #MyHeading {
+            border: 2px solid green;
+            width: 50%;
+            background-color: yellow;
+            text-align: center;
+        }
+        /*Class Selector*/
+        .MyTable {
+            border: 2px solid green;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="MyHeading">My Heading</h1>
+    <table class="MyTable">
+        <tr><th>Name</th><th>Age</th></tr>
+        <tr><td>John</td><td>24</td></tr>
+        <tr><td>Sam</td><td>23</td></tr>
+        <tr><td>Wong</td><td>21</td></tr>
+    </table>
+</body>
+</html>
