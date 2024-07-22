@@ -3,81 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-
+    <title>Calculator CSS</title>
     <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-        }
-        .container {
-            background-color: rgb(66, 66, 66);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .Display {
-            background-color: white;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            text-align: right;
-            font-size: 1.5rem;
-            height: 50px;
-            border-radius: 8px;
+        .container{
+            border: 10px solid rgb(3, 3, 24);
+            width: max-content;
+            height: max-content;
+            background-color: rgb(3, 3, 24);
+            border-radius: 30px;
+            box-shadow:0 10px 15px rgb(61, 61, 61);
+        
         }
         input{
-            background-color: transparent;
-            outline: none;
-            border: none;
-            padding: 5px;
-            font-size: large;
-            padding-top: 20px;
+            width: 200px;
+            height: 60px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 0 0 rgb(162, 161, 161);
         }
-        .nums {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+        .screen{
+            margin: 20px;
         }
         button{
-            color: black;
-            background-color: rgb(89, 239, 239);
-            border: 1px solid black;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: large;
-
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-left: 8px;
+            margin-bottom: 5px;
+            background-color: rgba(222, 219, 215, 0.918);
+            box-shadow:0 10px 15px rgb(61, 61, 61);
         }
     </style>
 </head>
 <body>
+    <div class="main">
+        <center>
     <div class="container">
-        <div class="Display">
-            <input type="number" placeholder="0">
+        <div class="screen">
+            <input type="number">
         </div>
-        <div class="nums">
-            <button>C</button>
+        <div class="digits">
             <button>%</button>
-            <button><-</button>
-            <button>/</button>
+            <button>CE</button>
+            <button>C</button>
+            <button>Del</button>
+        </div>
+        <div class="digits">
+            <button>1/x</button>
+            <button>x&sup2;</button>
+            <button>x&sup3;</button>
+            <button>&divide;</button>
+        </div>
+        <div class="digits">
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button>*</button>
+            <button>x</button>
+        </div>
+        <div class="digits">
             <button>4</button>
             <button>5</button>
             <button>6</button>
             <button>-</button>
+        </div>
+        <div class="digits">
             <button>1</button>
             <button>2</button>
             <button>3</button>
             <button>+</button>
-            <button>00</button>
+        </div>
+        <div class="digits">
+            <button>+/-</button>
             <button>0</button>
             <button>.</button>
             <button>=</button>
         </div>
     </div>
+</center>
 </body>
 </html>
