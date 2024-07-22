@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login window CSS</title>
+    <style>
+       input{
+            border: none;
+            border-bottom: 2px solid white;
+            background: transparent;
+            padding-top: 20px;
+            margin-bottom:20px;
+            color: white;
+        }
+        .container1{
+            border: rgb(9, 9, 9) ;
+            background: rgba(0, 0, 0, 0.386);
+            border-radius: 30px;
+            box-shadow: 0 5px 30px #fcfcfc1a;
+            backdrop-filter: blur(1.6px);
+            padding: 50px;
+            width: 500px;
+            height: 450px;
+        }
+        body{
+            margin-top: 60px;
+            background-image: url(image2);
+            background-repeat: none;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            border: 2px solid white;
+            width: 100px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+        }
+        button:hover{
+            background: aqua;
+        }
+        ::placeholder{
+            color: whitesmoke;
+        }
+        img{
+            width: 200px;
+            border-radius: 50%;
+            margin-top: -100px;
+        }
+        h4{
+            color: white;
+        }
+        h1{
+            color: white;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        
+    <div class="container1">
+        <img src="image3.png">
+    <h1>LOGIN WINDOW</h1>
+    <input type="text" placeholder="Email Address"><br>
+    <input type="password" placeholder="Password"><br>
+    <h4><input type="checkbox">Agree With <u>Terms & Condition</u></h4><br>
+    <br>
+    <button>Login</button>
+</div>
+</center>
+</body>
+</html>
