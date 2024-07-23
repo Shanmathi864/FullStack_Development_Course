@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function primenumber(){
+            let a=parseInt(document.getElementById("n").value);
+            let m=a/2;
+            let count=0;
+            if(a==0||a==1)
+            {
+                document.getElementById("Res").innerHTML=a+" is not a prime";
+            }
+            for(let i=2;i<=m;i++){
+                if(a%i==0)
+            {
+                document.getElementById("Res").innerHTML=a+" is not a prime";
+                count=1;
+                break;
+            }
+            }
+            if(count==0){
+                document.getElementById("result").innerHTML=a+" is a Prime";
+            }
+        }
+    </script>
+    <style>
+        input{
+            width: 200px;
+            height: 50px;
+            font-size: 3t0px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1 style="font-size: 60px;">Enter the Value:<input type="text"  id="n" onfocus="this.value=''" onblur="primenumber()"></h1><br><br>
+    <div id="Res" style="font-size: 50px;"></div>
+    <div id="result" style="font-size: 50px;"></div>
+</center>
+</body>
+</html>

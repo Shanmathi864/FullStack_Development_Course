@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+    <script>
+        function handleClick() {
+            document.write("Button clicked!<br>");
+        }
+
+
+        function handleMouseOver() {
+            document.write("Mouse over the text!<br>");
+        }
+
+        function handleChange() {
+            var value = document.getElementById("inputField").value;
+            document.write("Input changed to: " + value + "<br>");
+        }
+        function handleKeyDown(event) {
+            document.write("Key pressed: " + event.key + "<br>");
+        }
+        function onb(event) {
+            document.write("Key pressed: " + event.key + "<br>");
+        }
+        function onl(event) {
+            document.write("Key pressed: " + event.key + "<br>");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="handleClick()">Click Me</button>
+    <p onmouseover="handleMouseOver()">Hover over this text</p>
+    <input type="text" id="inputField" onchange="handleChange()">
+    <input type="text" onkeydown="handleKeyDown(event)">
+    <input type="text" onblur="onb(event)">
+    <input type="text" onload="onl(event)">
+</body>
+</html>

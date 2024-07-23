@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function starpattern(){
+            let a=parseInt(document.getElementById("n").value);
+            let result="";
+            for(let i=0;i<a;i++)
+            {
+                for(let j=0;j<=i;j++)
+                {
+                    result+="* "
+                }
+                result+="</br>";
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter the element: <input type="text" id="n" onfocus="this.value=''" onblur="starpattern()"/></h2>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Prompt</title>
+    <script>
+        function greeting() {
+            let name = prompt("Enter the Name:");
+            alert("Welcome "+name);
+        }
+        function leave() {
+            confrim("Do you want to leave the page?");
+        }
+    </script>
+</head>
+<body onload="Welcome()" onunload="leave()">
+    <button onclick="greeting()">Say Welcome</button>
+</body>
+</html>

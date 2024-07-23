@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Factorial</title>
+    <script>
+        function factorial(){
+            let a=parseInt(document.getElementById("n").value);
+            let mul=1;
+            for(let i=1;i<=a;i++)
+            {
+                mul=mul*i;
+            }
+            document.getElementById("Result").innerHTML=mul;
+        }
+    </script>
+</head>
+<body>
+    Enter the Element<input type="text" id="n" value="Enter the Value" onfocus="this.value=''"/>
+    <br>
+    <button onclick="factorial()">Factorial</button>
+    <div id="Result">
+
+    </div>
+</body>
+</html>

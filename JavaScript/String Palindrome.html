@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function palindrome(){
+            let a=document.getElementById("n").value;
+            let b="";
+            for(let i=a.length-1;i>=0;i--)
+        {
+            b+=a[i];
+        }
+        if(a==b)
+        {
+            document.getElementById("Result1").innerHTML=a+" is a Palindrome";
+        }
+        else{
+            document.getElementById("Result1").innerHTML=a+" is not a Palindrome";
+        }
+        } 
+    </script>
+</head>
+<body>
+    <p>Enter the value : <input type="text" id="n" onfocus="this.value=''" onblur="palindrome()"/></p>
+    <div id="Result1"></div>
+</body>
+</html>
