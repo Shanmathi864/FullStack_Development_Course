@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator CSS</title>
+    <style>
+        .container{
+            border: 10px solid rgb(5, 5, 52);
+            width: max-content;
+            height: max-content;
+            background-color: rgb(3, 3, 24);
+            border-radius: 30px;
+            box-shadow:0 10px 15px rgb(22, 5, 53);
+        
+        }
+        input{
+            width: 200px;
+            height: 60px;
+            border-radius: 20px;
+            
+            box-shadow: 5px 5px 0 0 rgb(103, 102, 102);
+        }
+        .screen{
+            margin: 20px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            margin-left: 7px;
+            margin-bottom: 5px;
+            background: radial-gradient(circle at center, #ffffff, #585957);
+        }
+    </style>
+    <script>
+        function clearValue(){
+            document.getElementById("displaybox").value="0";
+        }
+        function clearAll()
+        {
+            document.getElementById("displaybox").value="";
+        }
+        function display(val)
+        {
+            document.getElementById("displaybox").value+=val;
+        }
+        
+        function val(value)
+        {
+            var displaybox=document.getElementById("displaybox")
+            if(displaybox.value==="0")
+            {
+                displaybox.value=value;
+            }
+            else
+            {
+                displaybox.value+=value;
+            }
+        }
+        //deleting the recent entered number
+        function del(){
+            var displaybox=document.getElementById("displaybox")
+            displaybox.value=displaybox.value.slice(0,-1)
+            if(displaybox.value==="0")
+            {
+                displaybox.value="0"
+            }
+        }
+        function answers(){
+            try 
+            {
+                let answer = eval(document.getElementById("displaybox").value);
+                document.getElementById("displaybox").value = answer;
+            } 
+            catch (error) 
+            {
+                if (error instanceof SyntaxError) 
+                {
+                    document.getElementById("displaybox").value = 'Syntax Error';
+                } 
+                else 
+                {
+                    document.getElementById("displaybox").value = 'Error: ' + error.message;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <center>
+    <div class="container">
+        <div class="screen">
+            <input id="displaybox" type="text">
+        </div>
+        <div class="digits" id="displaybox">
+            <button value="%" onclick="display('%')">%</button>
+            <button onclick="clearAll()">CE</button>
+            <button  onclick="clearValue()" onfocus="this.value=' '">C</button>
+            <button onclick="del()">Del</button>
+        </div>
+        <div class="digits">
+            <button value="." onclick="display('.')">.</button>
+            <button >x&sup2;</button>
+            <button>x&sup3;</button>
+            <button value="/" onclick="display('/')">&divide;</button>
+        </div>
+        <div class="digits">
+            <button value="7" onclick="display('7')">7</button>
+            <button value="8" onclick="display('8')">8</button>
+            <button value="9" onclick="display('9')">9</button>
+            <button value="*" onclick="display('*')">&times;</button>
+        </div>
+        <div class="digits">
+            <button value="4" onclick="display('4')">4</button>
+            <button value="5" onclick="display('5')">5</button>
+            <button value="6" onclick="display('6')">6</button>
+            <button value="-" onclick="display('-')">-</button>
+        </div>
+        <div class="digits">
+            <button value="1" onclick="display('1')">1</button>
+            <button value="2" onclick="display('2')">2</button>
+            <button value="3" onclick="display('3')">3</button>
+            <button value="+" onclick="display('+')">+</button>
+        </div>
+        <div class="digits">
+            <button value="000" onclick="display('000')">000</button>
+            <button value="00" onclick="display('00')">00</button>
+            <button value="0" onclick="display('0')">0</button>
+            <button onclick="answers()">=</button>
+        </div>
+    </div>
+</center>
+</body>
+</html>
