@@ -27,14 +27,6 @@
 #l2{
     margin-top: -40px;
 }
-#header{
-
-}
-#Main-Container{
-   
-    /* width: 100%;
-    height: max-content; */
-}
 body{
     background-color:rgb(255, 231, 153);
 }
@@ -62,5 +54,13 @@ body{
     font-size: 20px;
     font-family: cursive;
     background-color: brown;
+    width: max-content;
+}
+#img1{
+   
+    border-radius: 10px;
+}
+#img2{
     
+    border-radius: 10px;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalculatorService } from './calculator.service';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  name : string;
+ /* name : string;
   age : number;
   email : string;
   imagePath : string;
@@ -61,6 +62,18 @@ changeImage(){
 // }
 // changeStyle(){
 //    this.myStyle = {'width': '40%','border': '2px solid green','border-radius': '25px'}
-// }
+//
 }
+*/
+ sum : number;
+ sub : number;
+ mul : number;
+ div : number;
+ constructor(private calc : CalculatorService, private fact : FactorialService ){
+  this.sum = calc.getAddition(10 , 20);
+  this.sub = calc.getSubtraction( 10, 20);
+  this.mul = calc.getMultiplication( 10, 20);
+  this.div = calc.getDivision( 100, 2);
+ }
+ }
 
